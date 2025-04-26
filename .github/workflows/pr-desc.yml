@@ -26,4 +26,6 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
-        run: npx ts-node generate-pr-description.ts
+        
+run: npx ts-node generate-pr-description.ts
+
