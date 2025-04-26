@@ -2,7 +2,7 @@ import { Octokit } from "@octokit/rest";
 import * as dotenv from "dotenv";
 import { summarizeDiff } from "./ai_pr_summerizer";
 dotenv.config();
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+const octokit = new Octokit({ auth: process.env.TOKEN });
 const generatePrDescription = async (owner: string, repo: string, prNumber: number) => {
   try {
     const { data: files } = await octokit.pulls.listFiles({
